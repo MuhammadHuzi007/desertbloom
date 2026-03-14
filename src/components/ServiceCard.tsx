@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Pencil, Sprout, Scissors, Flower2, Apple, Droplets, Wheat } from "lucide-react";
 
-const iconMap: Record<string, React.ElementType> = {
+const iconMap: Record<string, React.FC<{ className?: string }>> = {
   Pencil, Sprout, Scissors, Flower2, Apple, Droplets, Wheat,
 };
 

@@ -7,7 +7,7 @@ import { Check, ArrowRight, Pencil, Sprout, Scissors, Flower2, Apple, Droplets, 
 import { services } from "@/lib/data";
 import CTASection from "@/components/CTASection";
 
-const iconMap: Record<string, React.ElementType> = {
+const iconMap: Record<string, React.FC<{ className?: string }>> = {
   Pencil, Sprout, Scissors, Flower2, Apple, Droplets, Wheat,
 };
 

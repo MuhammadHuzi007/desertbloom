@@ -5,6 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Leaf, Award, Users, TreePine, ArrowRight } from "lucide-react";
 import CTASection from "@/components/CTASection";
+import dynamic from "next/dynamic";
+
+const FloatingOrb = dynamic<{ className?: string }>(
+  () => import("@/components/three/FloatingOrb"),
+  { ssr: false }
+);
 
 const team = [
   {
@@ -76,6 +82,7 @@ export default function AboutPage() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative h-96 rounded-2xl overflow-hidden"
             >
+              {/* 3D Orb layered over image */}
               <Image
                 src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
                 alt="DesertBloom team at work"
@@ -83,6 +90,7 @@ export default function AboutPage() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
+              <FloatingOrb className="absolute inset-0 z-10" />
             </motion.div>
           </div>
         </div>

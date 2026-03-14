@@ -3,15 +3,23 @@
 import { motion } from "framer-motion";
 import { MessageSquare, Pencil, Hammer, RefreshCw } from "lucide-react";
 import { processSteps } from "@/lib/data";
+import { lazy, Suspense } from "react";
 
-const iconMap: Record<string, React.ElementType> = {
+const WireframeSphere = lazy(() => import("@/components/three/WireframeSphere"));
+
+const iconMap: Record<string, React.FC<{ className?: string }>> = {
   MessageSquare, Pencil, Hammer, RefreshCw,
 };
 
 export default function ProcessSection() {
   return (
-    <section className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* 3D wireframe decorations */}
+      <Suspense fallback={null}>
+        <WireframeSphere className="absolute -right-32 top-1/2 -translate-y-1/2 w-96 h-96 opacity-60" />
+        <WireframeSphere className="absolute -left-32 top-1/4 w-64 h-64 opacity-40" />
+      </Suspense>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14">
           <span className="text-primary font-medium text-sm uppercase tracking-wider">How It Works</span>
           <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4">Our Process</h2>
@@ -22,7 +30,7 @@ export default function ProcessSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {processSteps.map((step, i) => {
-            const Icon = iconMap[step.icon] || MessageSquare;
+            const Icon = iconMap[step.icon] ?? MessageSquare;
             return (
               <motion.div
                 key={step.step}

@@ -3,6 +3,12 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const FloatingLeaves = dynamic<{ className?: string }>(
+  () => import("@/components/three/FloatingLeaves"),
+  { ssr: false }
+);
 
 export default function CTASection() {
   return (
@@ -10,6 +16,9 @@ export default function CTASection() {
       {/* Decorative circles */}
       <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white/5" />
       <div className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-white/5" />
+
+      {/* 3D Floating Leaves */}
+      <FloatingLeaves className="absolute inset-0 z-[1]" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-primary-foreground">
         <motion.div

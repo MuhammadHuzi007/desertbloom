@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const ParticleField = dynamic(() => import("@/components/three/ParticleField"), { ssr: false });
 
 export default function HeroSection() {
   return (
@@ -16,6 +19,11 @@ export default function HeroSection() {
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+
+      {/* 3D Particle Field overlay */}
+      <div className="absolute inset-0 z-[1]">
+        <ParticleField />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
