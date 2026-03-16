@@ -53,7 +53,7 @@ export default function ContactPage() {
                       value: "123 Garden Street, Model Town, Bahawalpur, Punjab 63100, Pakistan",
                     },
                     { icon: Phone, label: "Phone", value: "+92 300 123 4567", href: "tel:+923001234567" },
-                    { icon: Mail, label: "Email", value: "info@desertbloom.pk", href: "mailto:info@desertbloom.pk" },
+                    { icon: Mail, label: "Email", value: "info@terrascapestudio.pk", href: "mailto:info@terrascapestudio.pk" },
                     { icon: Clock, label: "Hours", value: "Mon–Sat: 9:00 AM – 6:00 PM" },
                   ].map((item) => (
                     <div key={item.label} className="flex items-start gap-4 p-4 rounded-xl bg-muted/50">
@@ -75,7 +75,7 @@ export default function ContactPage() {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/923001234567?text=Hi%20DesertBloom!%20I%27d%20like%20to%20book%20a%20free%20garden%20consultation."
+                href="https://wa.me/923001234567?text=Hi%20Terrascape%20Studio!%20I%27d%20like%20to%20book%20a%20free%20garden%20consultation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-5 rounded-xl bg-[#25D366] text-white hover:bg-[#25D366]/90 transition-all group"

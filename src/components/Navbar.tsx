@@ -187,7 +187,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col leading-none">
                 <span className="font-bold text-base text-foreground tracking-tight group-hover:text-primary transition-colors duration-300">
-                  DesertBloom
+                  Terrascape Studio
                 </span>
                 <span className="text-[10px] text-muted-foreground font-medium tracking-widest uppercase">
                   Horticulture

@@ -134,7 +134,7 @@ export const testimonials = [
     name: "Ahmed Raza Khan",
     role: "Homeowner, Model Town",
     content:
-      "DesertBloom completely transformed our barren backyard into a lush paradise. Their team understood the local climate perfectly and chose plants that thrive in Bahawalpur's heat. Absolutely worth every rupee.",
+      "Terrascape Studio completely transformed our barren backyard into a lush paradise. Their team understood the local climate perfectly and chose plants that thrive in Bahawalpur's heat. Absolutely worth every rupee.",
     rating: 5,
     avatar: "AR",
   },
@@ -152,7 +152,7 @@ export const testimonials = [
     name: "Tariq Hussain",
     role: "CEO, Cholistan Enterprises",
     content:
-      "The living wall installation in our office lobby is a showstopper. Every visitor comments on it. DesertBloom's indoor plant team is creative, punctual, and their maintenance service is excellent.",
+      "The living wall installation in our office lobby is a showstopper. Every visitor comments on it. Terrascape Studio's indoor plant team is creative, punctual, and their maintenance service is excellent.",
     rating: 5,
     avatar: "TH",
   },

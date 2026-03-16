@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2 font-bold text-xl mb-4">
               <Leaf className="w-6 h-6 text-primary" />
-              <span>DesertBloom</span>
+              <span>Terrascape Studio</span>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed mb-4">
               Bahawalpur&apos;s premier horticulture and landscaping consultancy. Transforming outdoor spaces since 2018.
@@ -72,14 +72,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0 text-primary" />
-                <a href="mailto:info@desertbloom.pk" className="hover:text-background transition-colors">info@desertbloom.pk</a>
+                <a href="mailto:info@terrascapestudio.pk" className="hover:text-background transition-colors">info@terrascapestudio.pk</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-background/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-background/50">
-          <p>© 2026 DesertBloom Horticulture. All rights reserved.</p>
+          <p>© 2026 Terrascape Studio. All rights reserved.</p>
           <p>Bahawalpur, Punjab, Pakistan</p>
         </div>
       </div>
